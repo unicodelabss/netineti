@@ -3,192 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineMagic Productions | Leading Production House</title>
-    <!-- Tailwind CSS CDN -->
+    <title>CinePro Studios | Premium Film Production House</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        /* Custom styles for animations */
-        .glass-nav {
-            background: rgba(10, 10, 10, 0.8);
-            backdrop-filter: blur(10px);
-        }
-        .hero-gradient {
-            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 100%);
-        }
-    </style>
 </head>
-<body class="bg-zinc-950 text-white font-sans selection:bg-orange-500 selection:text-white">
+<body class="bg-zinc-950 text-white font-sans">
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 glass-nav border-b border-zinc-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-black tracking-tighter uppercase italic">
-                Cine<span class="text-orange-500">Magic</span>
-            </a>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-8 font-medium uppercase text-sm tracking-widest">
-                <a href="#work" class="hover:text-orange-500 transition">Work</a>
-                <a href="#services" class="hover:text-orange-500 transition">Services</a>
-                <a href="#about" class="hover:text-orange-500 transition">About</a>
-                <a href="#contact" class="bg-orange-500 px-5 py-2 rounded-full hover:bg-orange-600 transition">Get In Touch</a>
+            <a href="index.html" class="text-2xl font-black tracking-tighter uppercase">CINE<span class="text-red-600">PRO</span></a>
+            <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest">
+                <a href="index.html" class="text-red-500">Home</a>
+                <a href="work.html" class="hover:text-red-500 transition">Work</a>
+                <a href="services.html" class="hover:text-red-500 transition">Services</a>
+                <a href="about.html" class="hover:text-red-500 transition">About</a>
+                <a href="contact.html" class="bg-red-600 px-4 py-2 rounded hover:bg-red-700 transition">Start a Project</a>
             </div>
-
-            <!-- Mobile Toggle -->
-            <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-zinc-800 p-6 flex flex-col space-y-4 text-center">
-            <a href="#work" class="text-lg py-2">Work</a>
-            <a href="#services" class="text-lg py-2">Services</a>
-            <a href="#about" class="text-lg py-2">About</a>
-            <a href="#contact" class="text-lg py-2 text-orange-500">Contact Us</a>
+            <button id="menu-btn" class="md:hidden text-2xl"><i class="fa-solid fa-bars"></i></button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <!-- Placeholder for Background Image/Video -->
-        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=2071" 
-             alt="Production Hero" 
-             class="absolute inset-0 w-full h-full object-cover opacity-50">
-        
-        <div class="absolute inset-0 hero-gradient"></div>
-
-        <div class="relative z-10 text-center px-4 max-w-4xl">
-            <h1 class="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-tight mb-6">
-                Hum Kahaniyan <span class="text-orange-500">Banate Hain</span>
-            </h1>
-            <p class="text-zinc-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-                Ad films, Music videos aur Cinematic storytelling ke liye aapka apna creative partner.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#work" class="px-8 py-4 bg-white text-black font-bold uppercase tracking-widest rounded-sm hover:bg-orange-500 hover:text-white transition">Explore Work</a>
-                <button class="px-8 py-4 border border-white font-bold uppercase tracking-widest rounded-sm hover:bg-white/10 transition">
-                    <i class="fa-solid fa-play mr-2"></i> Watch Reel
-                </button>
+        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover opacity-40">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-cinematographer-taking-a-shot-with-a-professional-camera-34531-large.mp4" type="video/mp4">
+        </video>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-6xl md:text-9xl font-black uppercase tracking-tighter mb-4">Vision In <span class="text-red-600">Motion</span></h1>
+            <p class="text-lg md:text-2xl text-zinc-300 max-w-2xl mx-auto mb-8 font-light italic">Award-winning production house specializing in commercials, music videos, and cinematic storytelling.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="work.html" class="px-10 py-4 bg-white text-black font-bold uppercase hover:bg-red-600 hover:text-white transition">View Showreel</a>
+                <a href="contact.html" class="px-10 py-4 border border-white font-bold uppercase hover:bg-white hover:text-black transition">Let's Talk</a>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="work" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="flex justify-between items-end mb-16">
-            <div>
-                <h2 class="text-4xl font-bold uppercase tracking-tighter italic">Hamara Kaam</h2>
-                <div class="w-20 h-1 bg-orange-500 mt-2"></div>
-            </div>
-            <p class="hidden md:block text-zinc-500 max-w-xs">Har frame me ek nayi soch aur perfection.</p>
-        </div>
-
-        <!-- Portfolio Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Project 1 -->
-            <div class="group relative overflow-hidden bg-zinc-900 aspect-video cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-70 group-hover:opacity-100">
-                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                    <span class="text-orange-500 text-xs font-bold uppercase">Music Video</span>
-                    <h3 class="text-xl font-bold">Midnight Rhythm</h3>
-                </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="group relative overflow-hidden bg-zinc-900 aspect-video cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-70 group-hover:opacity-100">
-                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                    <span class="text-orange-500 text-xs font-bold uppercase">Commercial</span>
-                    <h3 class="text-xl font-bold">The Modern Nomad</h3>
-                </div>
-            </div>
-            <!-- Project 3 -->
-            <div class="group relative overflow-hidden bg-zinc-900 aspect-video cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-70 group-hover:opacity-100">
-                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                    <span class="text-orange-500 text-xs font-bold uppercase">Short Film</span>
-                    <h3 class="text-xl font-bold">Silent Echoes</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-24 bg-zinc-900 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
-            <!-- Service 1 -->
-            <div class="p-8 border border-zinc-800 hover:border-orange-500 transition group">
-                <i class="fa-solid fa-pen-nib text-3xl text-orange-500 mb-6"></i>
-                <h3 class="text-2xl font-bold mb-4">Pre-Production</h3>
-                <p class="text-zinc-400">Concept development, Script writing, aur Storyboarding se aapki vision ko shape dena.</p>
-            </div>
-            <!-- Service 2 -->
-            <div class="p-8 border border-zinc-800 hover:border-orange-500 transition group">
-                <i class="fa-solid fa-video text-3xl text-orange-500 mb-6"></i>
-                <h3 class="text-2xl font-bold mb-4">Production</h3>
-                <p class="text-zinc-400">High-end equipment aur experienced crew ke saath high-quality shoot execute karna.</p>
-            </div>
-            <!-- Service 3 -->
-            <div class="p-8 border border-zinc-800 hover:border-orange-500 transition group">
-                <i class="fa-solid fa-film text-3xl text-orange-500 mb-6"></i>
-                <h3 class="text-2xl font-bold mb-4">Post-Production</h3>
-                <p class="text-zinc-400">Professional editing, Color grading, aur VFX jo aapke kaam me jaan foonk de.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-5xl font-black uppercase italic italic">Humein <span class="text-orange-500">Call Karein</span></h2>
-            <p class="mt-4 text-zinc-500">Aapka agla bada project yahan shuru hota hai.</p>
-        </div>
-        
-        <div class="max-w-2xl mx-auto bg-zinc-900 p-8 rounded-lg shadow-2xl">
-            <form class="space-y-6">
-                <div>
-                    <label class="block text-sm font-bold uppercase mb-2">Aapka Naam</label>
-                    <input type="text" class="w-full bg-zinc-800 border border-zinc-700 p-3 rounded focus:outline-none focus:border-orange-500" placeholder="Pritam Kumar">
-                </div>
-                <div>
-                    <label class="block text-sm font-bold uppercase mb-2">Email Address</label>
-                    <input type="email" class="w-full bg-zinc-800 border border-zinc-700 p-3 rounded focus:outline-none focus:border-orange-500" placeholder="hello@yourhouse.com">
-                </div>
-                <div>
-                    <label class="block text-sm font-bold uppercase mb-2">Message</label>
-                    <textarea class="w-full bg-zinc-800 border border-zinc-700 p-3 rounded h-32 focus:outline-none focus:border-orange-500" placeholder="Mujhe ek ad film banani hai..."></textarea>
-                </div>
-                <button class="w-full py-4 bg-orange-500 font-bold uppercase tracking-widest hover:bg-orange-600 transition rounded">Send Message</button>
-            </form>
+    <!-- Featured Section -->
+    <section class="py-24 px-6 max-w-7xl mx-auto text-center">
+        <h2 class="text-3xl font-bold uppercase mb-16 tracking-widest">Trusted By Global Brands</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 grayscale opacity-50">
+            <div class="text-3xl font-bold italic">SONY</div>
+            <div class="text-3xl font-bold italic">ADIDAS</div>
+            <div class="text-3xl font-bold italic">NETFLIX</div>
+            <div class="text-3xl font-bold italic">REDBULL</div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 border-t border-zinc-800 text-center text-zinc-600 text-sm">
-        <p class="mb-4 font-bold tracking-widest uppercase italic text-white">CineMagic Productions</p>
-        <div class="flex justify-center space-x-6 mb-6">
-            <a href="#" class="hover:text-white transition text-lg"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="hover:text-white transition text-lg"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#" class="hover:text-white transition text-lg"><i class="fa-brands fa-vimeo"></i></a>
+    <footer class="bg-zinc-900 py-12 px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-zinc-500 text-sm tracking-widest">&copy; 2025 CINEPRO PRODUCTIONS. ALL RIGHTS RESERVED.</p>
         </div>
-        <p>&copy; 2025 CineMagic. All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript for Mobile Menu -->
     <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close menu on click
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+        const btn = document.getElementById('menu-btn');
+        btn.addEventListener('click', () => {
+            // Add logic for mobile menu toggle
+            alert('Mobile Menu Toggle - Add a div for this!');
         });
     </script>
 </body>
